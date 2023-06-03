@@ -7,36 +7,34 @@ import { SiOpensea } from "react-icons/si";
 import { AiOutlineTwitter } from "react-icons/ai";
 
 const navigation = [
-  { name: "LORE", href: "/lore" },
-  { name: "QUIZ", href: "/quiz" },
-  { name: "ROADMAP", href: "/roadmap" },
-  { name: "TEAM", href: "/team" },
+  { name: "FAQ", href: "#faq" },
+  { name: "AM I ON", href: "#amion" },
+  { name: "CONTACT", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="  font-inter">
+    <header style={{ fontFamily: 'myfont' }} className="  ">
       <nav
         className="mx-auto flex max-w-[95rem] items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 font-black  text-3xl p-1.5">
+          <a href="/" className="-m-1.5  text-white text-3xl p-1.5">
             <span className="sr-only">Your Company</span>
-            <p className="tracking-[0.3em]">AK</p>
-            <p className="tracking-[0.3em] text-purp">CB</p>
+            $XBTG
           </a>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-6 text-white w-6" aria-hidden="true" />
           </button>
         </div>
         <div className="hidden w-4/6 lg:flex lg:justify-around">
@@ -44,13 +42,13 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-lg hover:underline underline-offset-4 font-bold leading-6 text-gray-900"
+              className="text-lg text-white hover:underline underline-offset-4 font-bold leading-6 white"
             >
               {item.name}
             </a>
           ))}
         </div>
-        <div className="hidden lg:gap-x-8 text lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden text-white lg:gap-x-8 text lg:flex lg:flex-1 lg:justify-end">
           <a href="https://discord.gg/4v2FfNwE" className="text-4xl text-purp hover:scale-105 transition">
             <BsDiscord />
           </a>
@@ -69,16 +67,15 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#EDEDED] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#1D3717] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-          <a href="/" className="-m-1.5 font-black  text-3xl p-1.5">
+          <a href="/" style={{ fontFamily: 'myfont' }} className="-m-1.5 text-white  text-3xl p-1.5">
             <span className="sr-only">Your Company</span>
-            <p className="tracking-[0.3em]">AK</p>
-            <p className="tracking-[0.3em] text-purp">CB</p>
+            $XBTG
           </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 white"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -90,15 +87,17 @@ export default function Navbar() {
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
                   <a
+                  onClick={()=>setMobileMenuOpen(false)}
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-purp hover:text-[#EDEDED]"
+                    style={{ fontFamily: 'myfont' }}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base text-white font-semibold leading-7 white hover:bg-purp hover:text-[#EDEDED]"
                   >
                     {item.name}
                   </a>
                 ))}
               </div>
-              <div className="py-6 text-purp flex gap-x-12">
+              <div className="py-6 text-white flex gap-x-12">
                 <a href="#" className="text-4xl text-purp hover:scale-105 transition">
                   <BsDiscord />
                 </a>

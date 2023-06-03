@@ -3,10 +3,12 @@
   src: url('./fonts/Minecraft.ttf') format('truetype');
 }
 
+html {
+scroll-behavior: smooth;
+}
 
 .gordinals {
   font-weight: 500;
-font-size: 96px;
 line-height: 105px;
 /* identical to box height */
 
@@ -15,3 +17,4 @@ color: #FFFFFF;
 
 text-shadow: -6px 11px 0px #408830;
 }
+
