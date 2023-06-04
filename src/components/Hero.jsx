@@ -20,7 +20,7 @@ export default function Hero() {
   }, [fullText, index, text]);
 
   return (
-    <div id="home" className="h-full bg-gray-900">
+    <div id="hero" className="h-full bg-gray-900">
       <div className="relative isolate h-full min-h-[55rem] overflow-hidden  lg:h-[100vh]">
         <Navbar />
         <img
@@ -36,7 +36,7 @@ export default function Hero() {
           className="absolute opacity-40 block lg:hidden inset-0 -z-10 h-full w-full object-cover "
         />
 
-        <div className=" px-12 py-32  sm:py-40 xl:px-36 2xl:px-64 ">
+        <div className=" px-12 py-32  sm:py-28 xl:px-36 2xl:px-64 ">
           <div className="hidden sm:mb-8  "></div>
           <div className="">
             <h1 className="gordinals mt-3  font-extrabold  text-white  text-5xl md:mt-6 ">
@@ -59,11 +59,11 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="mt-12 flex items-center  gap-x-6">
+            <div className="mt-12 flex flex-col sm:flex-row w-full gap-y-6 items-center  gap-x-6">
               <a
                 href="#amion"
              
-                className="flex w-64 items-center justify-center   bg-[#1D3717] px-5 py-3.5 text-2xl font-semibold text-white shadow-sm transition hover:bg-[#1D3717] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                className="flex sm:w-64 w-full items-center justify-center   bg-[#1D3717] px-5 py-3.5 text-2xl font-semibold text-white shadow-sm transition hover:bg-[#1D3717] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
               >
                 AM I IN?
               </a>

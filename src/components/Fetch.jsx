@@ -5,6 +5,8 @@ import banner from "../images/banner.jpeg";
 import { useWindowSize } from "@uidotdev/usehooks";
 import Confetti from "react-confetti";
 import toast, { Toast } from "react-hot-toast";
+import axios from 'axios';
+
 
 // import herovideo from '../../public/videos/'
 
@@ -20,25 +22,47 @@ export default function Fetch() {
     const endpoint = `http://3.136.27.52:3000/api/user/checkWhitelist?address=${address}`;
     console.log(endpoint);
 
-    try {
-      const response = await fetch(endpoint, { mode: "no-cors" });
-      const jsonData = await response.json();
-      console.log(jsonData);
 
-      if (jsonData.data === true) {
-        setShowComponent(true);
+    axios.get(endpoint)
+      .then(response => {
+        if (response.data.data === true) {
+            setShowComponent(true);
 
-        // Hide the component after 5 seconds
-        setTimeout(() => {
-          setShowComponent(false);
-        }, 5000);
-      } else {
-        toast.error("You are not whitelisted")
+            // Hide the component after 5 seconds
+            setTimeout(() => {
+              setShowComponent(false);
+            }, 5000);
+        }
+
+        else {
+            toast.error("You are not whitelisted")
+            
+          }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+
+
+    // try {
+    //   const response = await fetch(endpoint, { mode: "no-cors" });
+    //   const jsonData = await response.json();
+    //   console.log(jsonData);
+
+    //   if (jsonData.data === true) {
+    //     setShowComponent(true);
+
+    //     // Hide the component after 5 seconds
+    //     setTimeout(() => {
+    //       setShowComponent(false);
+    //     }, 5000);
+    //   } else {
+    //     toast.error("You are not whitelisted")
         
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    //   }
+    // } catch (error) {
+    //   console.error("Error fetching data:", error);
+    // }
   };
 
   return (
@@ -70,7 +94,7 @@ export default function Fetch() {
                 href="www.onlyfans.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-x-3 rounded-md  px-5 text-2xl font-semibold text-[#1D3717] shadow-sm transition  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                className="flex items-center justify-center gap-x-3 rounded-md  px-5 text-2xl font-semibold text-[#1D3717] shadow-sm transition  "
               >
                 ENTER A VALID BTC ADDRESS
               </p>
@@ -80,7 +104,7 @@ export default function Fetch() {
                   onChange={(addy) => setAddress(addy.target.value)}
                   href="#see-me"
                   placeholder="BTC WALLET HERE"
-                  className="mt-6  cursor-pointer border-2 border-[#1D3717] text-2xl font-semibold  leading-6 text-black px-2   py-4 block"
+                  className="mt-6   border-2 border-[#1D3717] text-2xl font-semibold   leading-6 outline-none focus:text-[#1D3717] transition px-2 bg-[#1D3717] focus:bg-white rounded-md  text-white  py-4 block"
                 />
 
                 <button

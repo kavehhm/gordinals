@@ -55,7 +55,7 @@ export default function FAQ() {
       <div className="relative isolate  overflow-hidden pt-14 ">
         <img
           src={banner}
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
         />
 
         <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-40">
