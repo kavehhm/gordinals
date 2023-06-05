@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { TbBrandOnlyfans } from "react-icons/tb";
-import banner from "../images/block.jpg";
+import banner from "../images/contact.jpeg";
 import Faq from "react-faq-component";
 import { BsDiscord } from "react-icons/bs";
 import { SiOpensea } from "react-icons/si";
@@ -56,7 +56,7 @@ export default function Contact() {
       <div className="relative isolate  overflow-hidden pt-14 ">
         <img
           src={banner}
-          className="absolute inset-0 -z-10  w-full h-full object-cover opacity-5"
+          className="absolute inset-0 -z-10  w-full h-full object-cover opacity-10"
         />
 
         <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-40">

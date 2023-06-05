@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { TbBrandOnlyfans } from "react-icons/tb";
-import banner from "../images/banner.jpeg";
+import banner from "../images/whitelistchecker.jpg";
 import { useWindowSize } from "@uidotdev/usehooks";
 import Confetti from "react-confetti";
 import toast, { Toast } from "react-hot-toast";
@@ -76,7 +76,7 @@ export default function Fetch() {
       <div className="relative isolate h-screen overflow-hidden pt-14 lg:h-[100vh]">
         <img
           src={banner}
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
         />
 
         <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-40">
@@ -94,7 +94,7 @@ export default function Fetch() {
                 href="www.onlyfans.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-x-3 rounded-md  px-5 text-2xl font-semibold text-[#1D3717] shadow-sm transition  "
+                className="flex items-center justify-center gap-x-3 rounded-md  px-5 text-2xl font-semibold text-white shadow-sm transition  "
               >
                 ENTER A VALID BTC ADDRESS
               </p>
@@ -109,7 +109,7 @@ export default function Fetch() {
 
                 <button
                   type="submit"
-                  className="flex w-full mt-6 items-center justify-center gap-x-3  bg-[#1D3717] px-5 py-3.5 text-2xl font-semibold text-white shadow-sm transition hover:bg-[#1D3717] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  className="flex w-full mt-6 items-center justify-center gap-x-3   bg-white px-5 py-3.5 text-2xl font-semibold text-1D3717 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
                   CLICK TO CHECK
                 </button>
